@@ -1,0 +1,26 @@
+{
+  "sequence": "A188196",
+  "previous_published_term": 24453922692,
+  "previous_published_index": 33,
+  "new_terms": 24,
+  "new_index_range": [
+    34,
+    57
+  ],
+  "searched_from": 24453922693,
+  "searched_through": 295147905179352825855,
+  "searched_through_expression": "4^34 - 1",
+  "integers_excluded": 295147905154898903139,
+  "equations_solved": 165,
+  "any_further_term_exceeds": 295147905179352825856,
+  "engines": {
+    "search.cpp": "branch and bound, full range",
+    "exhaustive.cpp": "meet in the middle, through 4^28 - 1"
+  },
+  "source_sha256": {
+    "search.cpp": "25ccdda112bd1fb198380ad1c236d704e58f4274a570035454acbc330eb03afd",
+    "exhaustive.cpp": "7b0b0f1bd794c7474b1b61f3d4a1d2a5935393675863c49f7085c6493eb6ca8a",
+    "verify.py": "71f9a82209652d46489793810d4ca0170adfaeeadeee6eebe12c5f01ea7e82c5",
+    "check_results.py": "be6c56e048ee6243a6333766f7159dfebffc7435c3076bda8e3e6e5b0f5ba9f0"
+  }
+}

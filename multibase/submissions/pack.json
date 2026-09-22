@@ -1,0 +1,93 @@
+[
+ {
+  "base": 3,
+  "seq": "A188195",
+  "published": 46,
+  "source": "b-file",
+  "total": 114,
+  "new": 68,
+  "first_new": 47,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188195/b188195.txt\">Table of n, a(n) for n = 1..114</a>",
+  "extensions": "a(47)-a(114) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b188195.txt",
+  "largest": "87747466573074009950352813199793"
+ },
+ {
+  "base": 4,
+  "seq": "A188196",
+  "published": 57,
+  "source": "b-file",
+  "total": 69,
+  "new": 12,
+  "first_new": 58,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188196/b188196.txt\">Table of n, a(n) for n = 1..69</a>",
+  "extensions": "a(58)-a(69) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "b188196.txt",
+  "largest": "4425531982097969546682217"
+ },
+ {
+  "base": 5,
+  "seq": "A187713",
+  "published": 42,
+  "source": "b-file",
+  "total": 99,
+  "new": 57,
+  "first_new": 43,
+  "link": "_Ijtihed Kilani_, <a href=\"/A187713/b187713.txt\">Table of n, a(n) for n = 1..99</a>",
+  "extensions": "a(43)-a(99) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b187713.txt",
+  "largest": "10085447433274486323082"
+ },
+ {
+  "base": 6,
+  "seq": "A188197",
+  "published": 58,
+  "source": "b-file",
+  "total": 86,
+  "new": 28,
+  "first_new": 59,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188197/b188197.txt\">Table of n, a(n) for n = 1..86</a>",
+  "extensions": "a(59)-a(86) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b188197.txt",
+  "largest": "155004865632509365831"
+ },
+ {
+  "base": 7,
+  "seq": "A188198",
+  "published": 53,
+  "source": "b-file",
+  "total": 81,
+  "new": 28,
+  "first_new": 54,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188198/b188198.txt\">Table of n, a(n) for n = 1..81</a>",
+  "extensions": "a(54)-a(81) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b188198.txt",
+  "largest": "93187729130564001246"
+ },
+ {
+  "base": 8,
+  "seq": "A188199",
+  "published": 55,
+  "source": "b-file",
+  "total": 75,
+  "new": 20,
+  "first_new": 56,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188199/b188199.txt\">Table of n, a(n) for n = 1..75</a>",
+  "extensions": "a(56)-a(75) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b188199.txt",
+  "largest": "409014367023961265443"
+ },
+ {
+  "base": 9,
+  "seq": "A188200",
+  "published": 68,
+  "source": "b-file",
+  "total": 92,
+  "new": 24,
+  "first_new": 69,
+  "link": "_Ijtihed Kilani_, <a href=\"/A188200/b188200.txt\">Table of n, a(n) for n = 1..92</a>",
+  "extensions": "a(69)-a(92) from _Ijtihed Kilani_, Sep 12 2026",
+  "bfile": "multibase/bfiles/b188200.txt",
+  "largest": "172142310334038381885"
+ }
+]

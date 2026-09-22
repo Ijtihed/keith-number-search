@@ -1,0 +1,16 @@
+exhaustive
+search
+search-clang
+*.exe
+/all.tsv
+/all-clang.tsv
+/mitm.tsv
+/published.tsv
+/published.txt
+/got.txt
+/want.txt
+__pycache__/
+multibase_bin
+multibase/blocks/
+multibase/indep/
+multibase/ext_b*.json

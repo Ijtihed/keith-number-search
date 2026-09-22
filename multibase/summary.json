@@ -1,0 +1,44 @@
+{
+ "A188195": {
+  "base": 3,
+  "terms": 114,
+  "searched_through": "3^67-1",
+  "largest": "87747466573074009950352813199793"
+ },
+ "A188196": {
+  "base": 4,
+  "terms": 69,
+  "searched_through": "4^41-1",
+  "largest": "4425531982097969546682217"
+ },
+ "A187713": {
+  "base": 5,
+  "terms": 99,
+  "searched_through": "5^32-1",
+  "largest": "10085447433274486323082"
+ },
+ "A188197": {
+  "base": 6,
+  "terms": 86,
+  "searched_through": "6^26-1",
+  "largest": "155004865632509365831"
+ },
+ "A188198": {
+  "base": 7,
+  "terms": 78,
+  "searched_through": "7^23-1",
+  "largest": "20328142566705958100"
+ },
+ "A188199": {
+  "base": 8,
+  "terms": 73,
+  "searched_through": "8^22-1",
+  "largest": "27424272456916626103"
+ },
+ "A188200": {
+  "base": 9,
+  "terms": 88,
+  "searched_through": "9^20-1",
+  "largest": "10663796184944693088"
+ }
+}

@@ -1,0 +1,85 @@
+name: Verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Also run the full exhaustive search (slow, ~25 min)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# Fast checks on every push. About twenty seconds.
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Check the term list
+        run: python verify.py
+
+      - name: Source hashes match minimality.json
+        run: python check_hashes.py
+
+      - name: Build
+        run: |
+          g++ -O3 -std=c++17 -Wall -Wextra -pthread search.cpp -o search
+          g++ -O3 -std=c++17 -Wall -Wextra -pthread exhaustive.cpp -o exhaustive
+          g++ -O3 -std=c++17 -Wall -Wextra -pthread multibase.cpp -o multibase_bin
+
+      - name: Reproduce the 33 published terms
+        run: |
+          ./search 4 24453922692 2 > published.tsv
+          python check_results.py published.tsv 4 24453922692 | tail -n +2 | tr -d ' \r' > got.txt
+          head -33 b188196.txt | cut -d' ' -f2 > want.txt
+          diff got.txt want.txt
+          echo "search reproduces OEIS a(1) through a(33)"
+
+      - name: Bad input is rejected
+        run: |
+          ! ./exhaustive 1 100 1
+          ! ./exhaustive abc 100 1
+          ! ./exhaustive 100 4 1
+          ! ./search 1 100
+          ! ./search abc 100
+
+  # The exhaustive re-run. Only on a manual dispatch with full=true.
+  full:
+    if: github.event_name == 'workflow_dispatch' && inputs.full
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build with both compilers
+        run: |
+          g++     -O3 -std=c++17 -Wall -Wextra -pthread search.cpp -o search
+          clang++ -O3 -std=c++17 -Wall -Wextra -pthread search.cpp -o search-clang
+          g++     -O3 -std=c++17 -Wall -Wextra -pthread exhaustive.cpp -o exhaustive
+
+      - name: Full range through 4^34-1
+        run: |
+          ./search 24453922693 295147905179352825855 2 > all.tsv
+          python check_results.py all.tsv 24453922693 295147905179352825855
+
+      - name: Same range under clang
+        run: |
+          ./search-clang 24453922693 295147905179352825855 2 > all-clang.tsv
+          diff all.tsv all-clang.tsv
+
+      - name: Meet in the middle through 4^28-1
+        run: |
+          ./exhaustive 24453922693 72057594037927935 2 > mitm.tsv
+          python check_results.py mitm.tsv 24453922693 72057594037927935

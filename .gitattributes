@@ -1,0 +1,4 @@
+b188196.txt text eol=lf
+terms.tsv text eol=lf
+multibase/bfiles/*.txt text eol=lf
+multibase/terms-*.tsv text eol=lf
